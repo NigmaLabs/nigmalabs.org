@@ -1,0 +1,139 @@
+{
+    "2012-01": {
+        "influence": {
+            "składki": 295,
+            "darowizny": 15
+        },
+        "expenses": {},
+        "balance": 310
+    },
+    "2012-02": {
+        "influence": {
+            "składki": 70,
+            "darowizny": 80,
+            "interest": 0.01
+        },
+        "expenses": {},
+        "balance": 460
+    },
+    "2013-07": {
+        "influence": {
+            "składki": 1305.00,
+            "darowizny": 1260.00
+        },
+        "expenses": {
+            "lokal":600.00
+        },
+        "balance": 69.89,
+        "balanceAfter": 2034.89
+    },
+    "2013-08": {
+        "influence": {
+            "składki": 1470.00,
+            "darowizny": 0
+        },
+        "expenses": {
+            "lokal":600.00,
+            "przelewy": 2.10
+        },
+        "balance": 2034.89,
+        "balanceAfter": 2902.79
+    },
+    "2013-09": {
+        "influence": {
+            "składki": 760.00,
+            "darowizny": 0
+        },
+        "expenses": {
+            "lokal":600.00,
+            "przelewy": 1.5
+        },
+        "balance": 2902.79,
+        "balanceAfter": 3061.29
+    },
+    "2013-10": {
+        "influence": {
+            "składki": 250.00,
+            "darowizny": 0
+        },
+        "expenses": {
+            "lokal":600.00,
+            "przelewy": 1.5
+        },
+        "balance": 3061.29,
+        "balanceAfter": 2711.29
+    },
+    "2013-11": {
+        "influence": {
+            "składki": 435.00,
+            "darowizny": 0
+        },
+        "expenses": {
+            "lokal":600.00,
+            "przelewy": 3
+        },
+        "balance": 2711.29,
+        "balanceAfter": 2543.29
+    },
+    "2013-12": {
+        "influence": {
+            "składki": 420.00,
+            "darowizny": 0
+        },
+        "expenses": {
+            "lokal":600.00,
+            "przelewy": 3,
+            "przywiezienie mebli": 70
+        },
+        "balance": 2543.29,
+        "balanceAfter": 2289.89
+    },
+    "2014-01": {
+        "influence": {
+            "składki": 450.00,
+            "darowizny": 0
+        },
+        "expenses": {
+            "lokal":500.00,
+            "przelewy": 1.5
+        },
+        "balance": 2289.89,
+        "balanceAfter": 2238.39
+    },
+    "2014-02": {
+        "influence": {
+            "składki": 400.00,
+            "darowizny": 0
+        },
+        "expenses": {
+            "lokal":600.00,
+            "przelewy": 1.5
+        },
+        "balance": 2238.39,
+        "balanceAfter": 2036.89
+    },
+    "2014-03": {
+        "influence": {
+            "składki": 150.00,
+            "darowizny": 0
+        },
+        "expenses": {
+            "lokal":600.00,
+            "przelewy": 1.5
+        },
+        "balance": 2036.89,
+        "balanceAfter": 1585.39
+    },
+    "2014-04": {
+        "influence": {
+            "składki": 650.00,
+            "darowizny": 0
+        },
+        "expenses": {
+            "lokal":600.00,
+            "przelewy": 1.5
+        },
+        "balance": 1585.39,
+        "balanceAfter": 1585.39
+    }
+}

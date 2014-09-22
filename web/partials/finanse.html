@@ -1,0 +1,55 @@
+<h1>Finanse</h1>
+
+<div ng-repeat="(key, year) in chars">
+    <h2>{{key}}</h2>
+    <div ac-chart="year.balanceChart.type" ac-data="year.balanceChart.data" ac-config="year.balanceChart.config" class='chart'></div>
+    <div ac-chart="year.exinChart.type" ac-data="year.exinChart.data" ac-config="year.exinChart.config" class='chart'></div>
+</div>
+
+<h1>Szczegóły finansów</h1>
+<div ng-repeat="(yearKey, year) in financeData">
+    <h2>{{yearKey}}</h2>
+    <div ng-repeat="(monthKey, month) in year">
+        <h3>{{monthKey}}</h3>
+        <div ng-hide="month.influence || month.expenses">
+            <div class="alert alert-info">
+                Brak zmian
+            </div>
+        </div>
+        <div class="row" ng-show="month.influence || month.expenses">
+            <div class="col-md-6">
+                <div class="well well-box-h well-success">
+                    <h4>Przychody</h4>
+                    <div ng-repeat="(name, val) in month.influence">
+                        <div class="row">
+                            <div class="col-md-4">{{name}}</div>
+                            <div class="col-md-8">{{val}}</div>
+                        </div>
+                    </div>
+                    <div ng-hide="month.influence">
+                        <div class="alert alert-warning">
+                            Nie dotyczy
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="well well-box-h well-danger">
+                    <h4>Wydatki</h4>
+                    <div ng-repeat="(name, val) in month.expenses">
+                        <div class="row">
+                            <div class="col-md-4">{{name}}</div>
+                            <div class="col-md-8">{{val}}</div>
+                        </div>
+                    </div>
+                    <div ng-hide="month.expenses">
+                        <div class="alert alert-info">
+                            Nie dotyczy
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

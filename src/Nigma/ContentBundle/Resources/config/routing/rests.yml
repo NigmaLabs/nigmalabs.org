@@ -1,0 +1,16 @@
+content_rest_root_document:
+    path: /
+
+# Partials
+
+content_partials:
+    path: /partials
+    defaults: { _controller: NigmaContentBundle:rest:getPartials }
+    methods: [GET]
+
+content_partial:
+    path: /partials/{partialId}
+    defaults: { _controller: NigmaContentBundle:rest:getPartial }
+    methods: [GET]
+    requirements:
+        partialId: \d+

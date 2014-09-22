@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+    Website created by: Sebastian Pożoga
+    For: NigmaLabs.org (The best hacker space ever ;) )
+    Opensource code: https://github.com/SebastianPozoga/nigmalabs.org
+-->
+
+{# Vars #}
+{% set defaultCurrentPath = path(app.request.attributes.get('_route'),
+                           app.request.attributes.get('_route_params')) %}
+{% set defaultDescription = "Stowarzyszenie NigmaLabs zrzesza osoby zajmujące 
+się elektroniką i majsterkowaniem. Tworzymy społeczność. Wymieniamy się wiedzą 
+i doświadczeniami." %}
+{% set defaultFavicon = asset('favicon.ico') %}
+{% set defaultSiteName = "NigmaLabs" %}
+
+{# Html #}
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="{{ app.request.getBaseURL() }}" target="_blank">
+        <title>{% block title %}{{title|default(defaultSiteName)}}{% endblock %}</title>
+        {% block meta_description %}
+            <!-- SEO -->
+            <meta name="description" content="{{description|default(defaultDescription)}}">
+            <meta name="keywords" content="{{keywords|default(defaultDescription)}}">
+            <meta name="author" content="{{author|default(defaultSiteName)}}">
+            <meta property="og:description" content="{{description|default('')}}">
+            <!-- Favicon -->
+            <link rel="icon" type="image/x-icon" href="{{favicon|default(defaultFavicon)}}">
+            <!-- Open Graph -->
+            <meta property="og:site_name" content="{{siteName|default(defaultSiteName)}}">
+            <meta property="og:title" content="{{title|default(defaultSiteName)}}">
+            <meta property="og:type" content="{{ogType|default('article')}}">
+            <meta property="og:url" content="{{ogUrl|default(app.request.uri)}}">
+            <meta property="og:image" content="{{ogImage|default(defaultFavicon)}}">
+        {% endblock %}
+        <!-- StyleSheets -->
+        <link rel="stylesheet" href="css/main.css">
+        {% block stylesheets %} 
+        {% endblock %}
+    </head>
+    <body local-links>
+        <!-- Body -->
+        {% block body %}
+            <div id="wrap">
+                <!-- Navbar -->
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">                   
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                                <span class="sr-only">Menu</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="" href="/">
+                                <img id="logo-img" src="resources/img/logo.png" alt="NigmaLabs Home" />
+                            </a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <!-- Main topics -->
+                                <li><a href="/o-nas">O nas</a></li>
+                                <li><a href="/test">test</a></li>
+                                <li><a href="/historia">Historia</a></li>
+                                <li><a href="http://wiki.nigmalabs.org/" target="_blank">Wiki</a></li>
+                                <li><a href="/FAQ">FAQ</a></li>
+                                <!-- Association -->
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Stowarzyszenie <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/statut">Statut</a></li>
+                                        <li><a href="/deklaracja">Deklaracja członkowska</a></li>
+                                        <li><a href="/zarzad">Zarząd</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="/finanse">Finanse</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Contact -->
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kontakt <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a rel="nofollow" href="https://www.facebook.com/pages/NigmaLabs/256406174394999"> <i class="socicon socicon-facebook"></i>Facebook</a></li>
+                                        <li><a rel="nofollow" href="https://plus.google.com/b/114342164066716351724/114342164066716351724/"><i class="socicon socicon-google"></i>Google Plus</a></li>
+                                        <li><a rel="nofollow" href="https://plus.google.com/u/0/communities/100788668081046885342"><i class="socicon socicon-google"></i>Społeczność</a></li>
+                                        <li><a rel="nofollow" href="https://bitbucket.org/nigmalabs"><i class="socicon socicon-bebo"></i>BitBucket</a></li>
+                                        <li><a rel="nofollow" href="https://twitter.com/nigmalabsorg"><i class="socicon socicon-twitter"></i>Twitter</a></li>
+                                        <li class="divider"></li>
+                                        <li><a rel="nofollow" href="ircs://freenode/nigmalabs"><b>IRC</b></a></li>
+                                        <li><a rel="nofollow" href="ircs://freenode/nigmalabs">Kanał <b>#nigmalabs</b></a></li>
+                                        <li><a rel="nofollow" href="http://webchat.freenode.net/">na <b>FreeNode</b></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+
+                <!-- Content -->
+                <div id="content-wrap" class="container">
+                    <div id="content" ng-view class="nga-default nga-stagger nga-rotate-left nga-only-enter">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer id="footer" class="footer">
+                    <div class="container">
+                        <div class="space-v">
+                            <a rel="nofollow" href="https://github.com/SebastianPozoga/nigmalabs.org">NigmaLabs.org Sourcecode</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        {% endblock %}
+
+        <!-- Javascripts -->
+        <script src="vendors/requirejs/require.js" data-main="js/main.js"></script>
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>

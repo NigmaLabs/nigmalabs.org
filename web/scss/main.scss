@@ -1,0 +1,75 @@
+
+
+@import "_variables.scss";
+@import "../vendors/bootstrap-sass/lib/bootstrap.scss";
+@import "../vendors/ng-animate-css/build/nga.css";
+@import "../vendors/ng-animate-css/build/nga.css";
+@import "../vendors/angular-bootstrap-colorpicker/css/colorpicker.css";
+@import "_fonts.scss";
+@import "_sticky_footer.scss"; 
+
+
+/*Fonts*/
+@font-face {
+    font-family: 'socicon';
+    src: url('font/socicon-webfont.eot');
+    src: url('font/socicon-webfont.eot?#iefix') format('embedded-opentype'),
+        url('font/socicon-webfont.woff') format('woff'),
+        url('font/socicon-webfont.ttf') format('truetype'),
+        url('font/socicon-webfont.svg#sociconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*animate*/
+.ng-animate{
+    &.nga-only-enter{
+        min-height:100px;
+        &.ng-enter{
+        }
+        &.ng-leave {
+            display: none !important;
+        }
+    }
+}
+
+/*Page*/
+#logo-img{
+    height: 40px;
+    margin:5px;
+}
+
+/* hatta */
+.hatta-purple{
+    display: none;
+}
+
+//helpers
+.space-v{
+    padding:10px 0px 10px 0px;
+}
+
+iframe{
+    max-width: 100%;
+}
+
+//
+.chart{
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    height: 300px;
+}
+
+//well
+.well-danger{
+    background-color: $state-danger-bg !important; 
+}
+.well-success{
+    background-color: $state-success-bg !important;
+} 
+.well-box-h{
+    min-height: 150px;
+}

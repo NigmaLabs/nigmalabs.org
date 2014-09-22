@@ -1,0 +1,4 @@
+define([
+    './localLinks',
+], function() {
+});

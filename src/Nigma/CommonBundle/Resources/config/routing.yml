@@ -1,0 +1,5 @@
+
+home_page:
+    path: /
+    defaults: { _controller: NigmaCommonBundle:Index:index }
+    methods: [GET]

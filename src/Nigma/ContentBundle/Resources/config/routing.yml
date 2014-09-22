@@ -1,0 +1,23 @@
+
+nigma_content_rests:
+    resource: "routing/rests.yml"
+    prefix: "/rest"
+    defaults:  { _format: json }
+    
+#static pages
+nigma_page_finance:
+    path: /finanse
+    defaults: { _controller: NigmaContentBundle:Pages:finance }
+    methods: [GET]
+    
+#dynamic pages
+nigma_page_db:
+    path: /{name}
+    defaults: { _controller: NigmaContentBundle:Pages:db }
+    methods: [GET]
+    
+#homepage
+nigma_homepage:
+    path: /
+    defaults: { _controller: NigmaContentBundle:Pages:db, name: home }
+    methods: [GET]

@@ -1,0 +1,5 @@
+define([
+    './finance',
+    './content'
+], function() {
+});

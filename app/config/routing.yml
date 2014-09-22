@@ -1,0 +1,8 @@
+nigma_content:
+    resource: "@NigmaContentBundle/Resources/config/routing.yml"
+    prefix:   /
+
+nigma_common:
+    resource: "@NigmaCommonBundle/Resources/config/routing.yml"
+    prefix:   /
+

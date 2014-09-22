@@ -1,0 +1,7 @@
+parameters:
+#    nigma_common.example.class: Nigma\CommonBundle\Example
+
+services:
+#    nigma_common.example:
+#        class: %nigma_common.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
