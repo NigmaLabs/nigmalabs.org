@@ -19,7 +19,7 @@ class SimplePageDto implements JsonSerializable {
     private $data;
 
     public function __construct($page) {
-        $this->data = [
+        $this->data = array(
             self::ID => $page->getId(),
             self::TITLE => $page->getTitle(),
             self::DESCRIPTION => $page->getDescription(),
@@ -27,7 +27,7 @@ class SimplePageDto implements JsonSerializable {
             self::IMAGE => $page->getImage(),
             self::NAME => $page->getName(),
             self::SECTION => $page->getSection()
-        ];
+        );
     }
     
     public function getData(){

@@ -10,7 +10,7 @@ class SimplePageListDto implements JsonSerializable {
     private $data;
 
     public function __construct($pages) {
-        $this->data = [];
+        $this->data = array();
         foreach($pages as $page){
             $dto = new SimplePageDto($page);
             $this->data[] = $dto->getData();
