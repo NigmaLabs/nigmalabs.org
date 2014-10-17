@@ -14,13 +14,13 @@ class PagesController extends Controller {
         if ($page == NULL) {
             throw new NotFoundHttpException("Page not found");
         }
-        return $this->render('NigmaContentBundle:Pages:template.html.twig', [
+        return $this->render('NigmaContentBundle:Pages:template.html.twig', array(
                     'page' => $page,
                     'description' => $page->getDescription(),
                     'keywords' => $page->getKeywords(),
                     'title' => $page->getTitle(),
                     'ogImage' => $page->getImage()
-        ]);
+        ));
     }
 
     public function staticPageAction($name) {
