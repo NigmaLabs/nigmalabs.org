@@ -5,19 +5,19 @@ nigma_content_rests:
     defaults:  { _format: json }
     
 #static pages
-nigma_page_finance:
-    path: /finanse
-    defaults: { _controller: NigmaContentBundle:Pages:finance }
-    methods: [GET]
+#nigma_page_finance:
+#    path: /finanse
+#    defaults: { _controller: NigmaContentBundle:Pages:finance }
+#    methods: [GET]
     
 #dynamic pages
-nigma_page_db:
+nigma_static_page:
     path: /{name}
-    defaults: { _controller: NigmaContentBundle:Pages:db }
+    defaults: { _controller: NigmaContentBundle:Pages:staticPage }
     methods: [GET]
     
 #homepage
-nigma_homepage:
-    path: /
-    defaults: { _controller: NigmaContentBundle:Pages:db, name: home }
-    methods: [GET]
+#nigma_homepage:
+#    path: /
+#    defaults: { _controller: NigmaContentBundle:Pages:db, name: home }
+#    methods: [GET]

@@ -23,8 +23,8 @@ class PagesController extends Controller {
         ]);
     }
 
-    public function financeAction() {
-        return $this->render('NigmaContentBundle:Pages:finance.html.twig');
+    public function staticPageAction($name) {
+        return $this->render("NigmaContentBundle:Pages:${name}.html.twig");
     }
 
 }

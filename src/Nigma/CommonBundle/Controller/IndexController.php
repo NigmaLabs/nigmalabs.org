@@ -8,6 +8,8 @@ class IndexController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('NigmaCommonBundle:Default:index.html.twig');
+        return $this->forward('NigmaContentBundle:Pages:staticPage', array(
+            'name'  => 'o-nas',
+        ));
     }
 }
