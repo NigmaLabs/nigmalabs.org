@@ -30,13 +30,13 @@ watch:
 
 submodules-init:
 	git submodule init
-	git submodule update
+#	git submodule update
 
 irc-api-make:
-	make --directory="services/irc-api/"
+#	make --directory="services/irc-api/"
 
 services-run:
-	make --directory="services/irc-api/" run
+#	make --directory="services/irc-api/" run
 
 server-run:
 	php app/console server:run
