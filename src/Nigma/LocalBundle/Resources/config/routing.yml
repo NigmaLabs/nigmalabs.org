@@ -1,0 +1,4 @@
+
+nigma_open_signal:
+    path:     /api/openSignal/{secret}
+    defaults: { _controller: NigmaLocalBundle:Default:index }

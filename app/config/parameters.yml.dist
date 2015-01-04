@@ -17,3 +17,6 @@ parameters:
     debug_toolbar:          true
     debug_redirects:        false
     use_assetic_controller: true
+
+    remote_secret: dfmods21sd9vds87cd
+    remote_api_url: http://nigmalabs.org/

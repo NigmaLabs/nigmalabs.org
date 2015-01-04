@@ -1,3 +1,12 @@
+nigma_local:
+    resource: "@NigmaLocalBundle/Resources/config/routing.yml"
+    prefix:   /
+
+nigma_admin:
+    resource: "@NigmaAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 nigma_content:
     resource: "@NigmaContentBundle/Resources/config/routing.yml"
     prefix:   /

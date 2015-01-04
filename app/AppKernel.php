@@ -19,6 +19,8 @@ class AppKernel extends Kernel
             new Nigma\CommonBundle\NigmaCommonBundle(),
             new Nigma\ContentBundle\NigmaContentBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            new Nigma\AdminBundle\NigmaAdminBundle(),
+            new Nigma\LocalBundle\NigmaLocalBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
