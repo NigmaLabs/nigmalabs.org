@@ -1,0 +1,12 @@
+parameters:
+    nigma_local.open_log.class: Nigma\LocalBundle\Service\OpenLogService
+    nigma_local.send_open_signal_command.class: Nigma\LocalBundle\Command\OpenLogService
+
+services:
+    nigma_local.open_log:
+        class: %nigma_local.open_log.class%
+        arguments: ['@service_container']
+    nigma_local.send_open_signal_command:
+        class: %nigma_local.send_open_signal_command.class%
+        tags:
+            -  { name: console.command }

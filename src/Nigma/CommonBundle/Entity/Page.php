@@ -14,7 +14,7 @@ class Page
 {
     const MAIN_SECTION = 0;
     const GUILD_SECTION = 1;
-    const PRIJECTS_SECTION = 2;
+    const PROJECTS_SECTION = 2;
     const CONTACT_SECTION = 3;
     const MEETUP_SECTION = 4;
 

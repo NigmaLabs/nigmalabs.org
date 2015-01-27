@@ -1,3 +1,0 @@
-[submodule "services/irc-api"]
-	path = services/irc-api
-	url = https://github.com/SebastianPozoga/nodejs-irc-history-bot.git
