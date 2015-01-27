@@ -9,8 +9,8 @@ clear-cache:
 	php app/console cache:clear --env=prod
 
 bower-install:
-	bower prune
-	bower install
+	bower prune --allow-root
+	bower install --allow-root
 
 assetic-compile:
 	php app/console assetic:dump
